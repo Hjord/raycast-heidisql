@@ -1,0 +1,48 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "heidisql",
+  "title": "HeidiSQL",
+  "description": "Search and open your HeidiSQL saved database connections directly from Raycast. Reads sessions from the Windows Registry and supports MySQL, PostgreSQL, MSSQL, SQLite, and more.",
+  "icon": "icon.png",
+  "author": "hjord",
+  "categories": ["Developer Tools"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search-connections",
+      "title": "Search HeidiSQL",
+      "subtitle": "HeidiSQL",
+      "description": "Search and open HeidiSQL database connections",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "heidisqlPath",
+      "title": "HeidiSQL Executable Path",
+      "description": "Path to heidisql.exe. Leave empty to auto-detect from Program Files.",
+      "type": "textfield",
+      "required": false,
+      "default": ""
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.0",
+    "@raycast/utils": "^1.19.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "22.x",
+    "@types/react": "19.x",
+    "eslint": "^8.57.0",
+    "prettier": "^3.4.0",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
