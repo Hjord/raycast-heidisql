@@ -7,6 +7,7 @@
   "author": "hjord",
   "categories": ["Developer Tools"],
   "license": "MIT",
+  "platforms": ["Windows"],
   "commands": [
     {
       "name": "search-connections",
